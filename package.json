@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors --content-base build --history-api-fallback --port 8080",
-    "build": "webpack --progress --profile --colors",
-    "watch": "webpack --progress --profile --colors --watch"
+    "start": "webpack-dev-server --colors --content-base build --history-api-fallback --port 8080",
+    "build": "webpack --progress --profile --colors"
   },
   "repository": {
     "type": "git",
@@ -34,19 +33,25 @@
     "babel-preset-es2016": "^6.0.11",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
+    "bootstrap-loader": "^1.0.10",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "i": "^0.3.5",
     "json-loader": "^0.5.4",
     "manifest-revision-webpack-plugin": "^0.2.0",
     "node-sass": "^3.7.0",
+    "resolve-url-loader": "^1.4.3",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "isomorphic-style-loader": "^1.0.0",
     "jquery": "^2.2.3",
     "react": "^15.0.2",
     "react-bootstrap": "^0.29.3",
