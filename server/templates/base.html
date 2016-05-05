@@ -5,20 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% block head %}
-        <title>Title</title>
-    {% endblock head %}
+    <title>Beam App</title>
 
-
-    {% assets "lib_css", "css" %}
-        <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
-    {% endassets %}
+    {{ stylesheet_tag('style') | safe }}
 
 </head>
 <body>
-    {% block navbar %}
-        {% include "navbar.html" %}
-    {% endblock navbar %}
+    {% include "navbar.html" %}
 
     <div class="container" id="content">
         {% block content %}{% endblock content %}
@@ -28,10 +21,7 @@
         <p>&copy; Company 2016</p>
     </footer>
 
-
-    {% assets "lib_js", "js" %}
-        <script src="{{ ASSET_URL }}"></script>
-    {% endassets %}
+    {{ javascript_tag('vendor') | safe }}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
