@@ -6,8 +6,6 @@ import App from './components/App';
 import Repos from './components/Repos';
 import About from './components/About';
 
-alert('Hello you')
-
 render((
     <Router history={browserHistory}>
         <Route path="/" component={App} />

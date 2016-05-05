@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
+import withStyles from 'isomorphic-style-loader/lib/withStyles'
+import s from './App.scss'
 
-export default class App extends Component {
+class App extends Component {
     render() {
         return (
-            <div>
+            <div className="jumbotron">
                 <h1>React Router Tutorial</h1>
                 <ul role="nav">
                     <li><Link to="/about">About</Link></li>
@@ -14,3 +16,5 @@ export default class App extends Component {
         )
     }
 }
+
+export default withStyles(App, s)
