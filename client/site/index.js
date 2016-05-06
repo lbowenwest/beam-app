@@ -1,1 +1,0 @@
-// import s from './main.scss'

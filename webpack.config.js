@@ -8,11 +8,12 @@ var rootAssetPath = path.join(__dirname, 'client');
 
 
 module.exports = {
+    debug: true,
+    devtool: 'source-map',
+
     entry: {
         vendor: [],
-
-        app: path.join(rootAssetPath, 'app'),
-        site: path.join(rootAssetPath, 'site')
+        site: rootAssetPath
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -45,7 +46,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader'
         }, {
-            test: /\.(sc|sa|c)ss/,
+            test: /\.s?css/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass'),
         }, {
             test: /\.json$/,

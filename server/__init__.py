@@ -22,7 +22,7 @@ def register_blueprints(current_app):
     from .beam.api import beam_api
 
     current_app.register_blueprint(routes)
-    current_app.register_blueprint(beam_routes, url_prefix='/beam')
+    current_app.register_blueprint(beam_routes, url_prefix='/app')
     current_app.register_blueprint(beam_api, url_prefix='/api')
 
 register_blueprints(app)

@@ -6,6 +6,8 @@ from .utilities import IFinder
 
 beam_api = Blueprint('beam_api', __name__, template_folder='templates')
 
+# TODO: Construct robust server api
+
 
 @beam_api.route('/calculate/beam', methods=['GET', 'POST'])
 def calculate():

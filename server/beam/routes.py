@@ -6,4 +6,4 @@ beam_routes = Blueprint('beam_routes', __name__ + '_routes', template_folder='te
 @beam_routes.route('/', defaults={'path': ''})
 @beam_routes.route('/<path:path>')
 def index(path):
-    return render_template('beam/index.html')
+    return render_template('main/index.html')
